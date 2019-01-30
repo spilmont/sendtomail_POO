@@ -11,24 +11,32 @@ require "classes/mail.php";
 
 $monMail = new mail();
 
-$email =(isset($_GET["email"])?$_GET["email"]:null);
+/*$email =(isset($_GET["email"])?$_GET["email"]:null);
 $email = filter_var($email,FILTER_SANITIZE_EMAIL);
 $titre =(isset($_GET["titre"])?$_GET["titre"]:null);
 $titre = filter_var($titre,FILTER_SANITIZE_STRING);
 $message =(isset($_GET["message"])?$_GET["message"]:null);
-$message = filter_var($message,FILTER_SANITIZE_STRING);
+$message = filter_var($message,FILTER_SANITIZE_STRING);*/
 
 
-$monMail->setdestinataire($email);
-$monMail->settitre($titre);
-$monMail->setmessage($message);
+$monMail->setdestinataire('dd.spilmont59212@gmail.com');
+$monMail->settitre('salut');
+$monMail->setmessage('c moi');
 
 
-$monMail->send();
+
+
+ $monMail->send();
+
+
+
+
+
+
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,4 +50,4 @@ $monMail->send();
 <input type="submit" value="send">
 </form>
 </body>
-</html>
+</html> -->
